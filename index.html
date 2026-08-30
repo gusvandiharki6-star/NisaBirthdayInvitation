@@ -231,7 +231,7 @@ updateCountdown();setInterval(updateCountdown,1000);
 
 function toggleMusic(){
   const a=document.getElementById('audio'),b=document.getElementById('musicBtn');
-  if(!a.src){alert('"birthday-song.mp3" type="audio/mpeg"');return}
+  if(!a.src){alert("birthday-song.mp3");return}
   if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='♫'}
 }
 </script>
