@@ -3,212 +3,1509 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Anisa — 31 August</title>
-<meta name="description" content="A romantic luxury birthday invitation for Anisa Gusni Fitri from Gusvandi Harki.">
+
+<meta name="description"
+      content="A romantic luxury birthday invitation for Anisa Gusni Fitri from Gusvandi Harki.">
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
-:root{
-  --black:#080708; --deep:#16090e; --burgundy:#4b101d;
-  --gold:#d6b36a; --gold-soft:#f1d99a; --cream:#f8f0df;
+:root {
+    --black: #080708;
+    --deep: #16090e;
+    --burgundy: #4b101d;
+    --gold: #d6b36a;
+    --gold-soft: #f1d99a;
+    --cream: #f8f0df;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--black);color:var(--cream);font-family:Montserrat,sans-serif;font-weight:300}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#fff 0.5px,transparent .5px);background-size:5px 5px;z-index:20}
-h1,h2,h3,.serif{font-family:"Cormorant Garamond",serif}
-button{font:inherit}
-.cover{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;background:
-radial-gradient(circle at 50% 40%,rgba(117,23,47,.42),transparent 38%),
-linear-gradient(135deg,#050505,#170a0f 55%,#070707)}
-.cover:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(214,179,106,.2);border-radius:50%;box-shadow:0 0 100px rgba(214,179,106,.08);animation:spin 30s linear infinite}
-.goldline{height:1px;width:90px;background:var(--gold);margin:20px auto}
-.eyebrow{letter-spacing:5px;text-transform:uppercase;font-size:10px;color:var(--gold-soft)}
-.cover-card{text-align:center;z-index:2;padding:30px}
-.cover h1{font-size:clamp(60px,12vw,120px);font-weight:500;line-height:.8;margin:15px 0;color:var(--gold-soft)}
-.cover .subtitle{font-size:13px;letter-spacing:3px;text-transform:uppercase}
-.open{margin-top:42px;padding:14px 30px;border:1px solid var(--gold);color:var(--cream);background:transparent;letter-spacing:3px;text-transform:uppercase;font-size:10px;cursor:pointer;transition:.3s}
-.open:hover{background:var(--gold);color:#120b08}
-section{padding:95px 22px;position:relative}
-.container{max-width:900px;margin:auto}
-.center{text-align:center}
-.kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:10px}
-h2{font-size:clamp(42px,7vw,70px);font-weight:500;margin:12px 0 25px}
-.lead{max-width:650px;margin:auto;line-height:1.9;color:#e9ddc8;font-size:14px}
-.ornament{color:var(--gold);font-size:20px;letter-spacing:10px}
-.message{background:linear-gradient(180deg,#090809,#1a0b10);border-top:1px solid rgba(214,179,106,.25);border-bottom:1px solid rgba(214,179,106,.25)}
-.message p{font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.55;max-width:700px;margin:35px auto}
-.event{background:radial-gradient(circle at 50% 0,rgba(95,18,39,.4),transparent 50%),#090708}
-.event-box{border:1px solid rgba(214,179,106,.45);padding:45px 25px;text-align:center;position:relative;background:rgba(255,255,255,.015)}
-.event-box:before,.event-box:after{content:"✦";position:absolute;color:var(--gold);font-size:20px;top:15px}.event-box:before{left:18px}.event-box:after{right:18px}
-.date{font-family:"Cormorant Garamond",serif;font-size:55px;color:var(--gold-soft)}
-.venue{font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-top:10px}
-.story{display:grid;grid-template-columns:1fr;gap:18px;max-width:650px;margin:45px auto 0}
-.story-item{padding:25px;border-left:1px solid var(--gold);background:linear-gradient(90deg,rgba(75,16,29,.25),transparent)}
-.story-item h3{font-size:25px;margin:0 0 7px;color:var(--gold-soft)}
-.story-item p{line-height:1.7;font-size:13px;color:#d9cdb9;margin:0}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:600px;margin:35px auto}
-.time{padding:20px 5px;border:1px solid rgba(214,179,106,.25);background:#100b0d}.num{font-family:"Cormorant Garamond",serif;font-size:38px;color:var(--gold-soft)}.label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#bba98c}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
-.photo{aspect-ratio:1/1;background:linear-gradient(135deg,#201317,#0e0c0d);border:1px solid rgba(214,179,106,.15);display:grid;place-items:center;color:#806f5a;font-size:10px;letter-spacing:2px;text-transform:uppercase}
-.letter{max-width:680px;margin:auto;padding:45px 30px;border:1px solid rgba(214,179,106,.35);background:#0d090b}
-.letter p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.7}
-.signature{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--gold-soft)}
-footer{text-align:center;padding:70px 20px 90px;background:#050505}
-.heart{font-size:25px;color:#b74b62;animation:pulse 1.6s infinite}
-.music{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:#120a0d;color:var(--gold-soft);z-index:30;cursor:pointer}
-.hidden{display:none!important}
-.fade{opacity:0;transform:translateY(25px);transition:1s}.fade.show{opacity:1;transform:none}
-@keyframes pulse{50%{transform:scale(1.2)}} @keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:600px){.gallery{grid-template-columns:1fr 1fr}.countdown{grid-template-columns:repeat(2,1fr)}section{padding:75px 18px}.cover:after{width:330px;height:330px}}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Grain Effect */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.13;
+    background-image: radial-gradient(#fff 0.5px, transparent 0.5px);
+    background-size: 5px 5px;
+    z-index: 20;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+.serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+button {
+    font: inherit;
+}
+
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(117, 23, 47, 0.42),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #050505,
+            #170a0f 55%,
+            #070707
+        );
+}
+
+.cover::after {
+    content: "";
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border: 1px solid rgba(214, 179, 106, 0.2);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 100px rgba(214, 179, 106, 0.08);
+
+    animation: spin 30s linear infinite;
+}
+
+.cover-card {
+    text-align: center;
+    z-index: 2;
+    padding: 30px;
+}
+
+.eyebrow {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--gold-soft);
+}
+
+.goldline {
+    height: 1px;
+    width: 90px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+
+.cover h1 {
+    font-size: clamp(60px, 12vw, 120px);
+    font-weight: 500;
+    line-height: 0.8;
+
+    margin: 15px 0;
+
+    color: var(--gold-soft);
+}
+
+.cover .subtitle {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.open {
+    margin-top: 42px;
+
+    padding: 14px 30px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--cream);
+
+    background: transparent;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.open:hover {
+    background: var(--gold);
+    color: #120b08;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+    padding: 95px 22px;
+    position: relative;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.kicker {
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+}
+
+h2 {
+    font-size: clamp(42px, 7vw, 70px);
+
+    font-weight: 500;
+
+    margin: 12px 0 25px;
+}
+
+.lead {
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #e9ddc8;
+
+    font-size: 14px;
+}
+
+.ornament {
+    color: var(--gold);
+
+    font-size: 20px;
+
+    letter-spacing: 10px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    background:
+        linear-gradient(
+            180deg,
+            #090809,
+            #1a0b10
+        );
+
+    border-top: 1px solid rgba(214, 179, 106, 0.25);
+
+    border-bottom: 1px solid rgba(214, 179, 106, 0.25);
+}
+
+.message p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+    line-height: 1.55;
+
+    max-width: 700px;
+
+    margin: 35px auto;
+}
+
+/* =========================
+   EVENT
+========================= */
+
+.event {
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(95, 18, 39, 0.4),
+            transparent 50%
+        ),
+        #090708;
+}
+
+.event-box {
+    border: 1px solid rgba(214, 179, 106, 0.45);
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.event-box::before,
+.event-box::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: var(--gold);
+
+    font-size: 20px;
+
+    top: 15px;
+}
+
+.event-box::before {
+    left: 18px;
+}
+
+.event-box::after {
+    right: 18px;
+}
+
+.date {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    color: var(--gold-soft);
+}
+
+.venue {
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   DRESS CODE
+========================= */
+
+.dress-divider {
+    margin: 32px auto 5px;
+
+    width: 70px;
+
+    height: 1px;
+
+    background: rgba(214, 179, 106, 0.35);
+}
+
+.dress-label {
+    margin-top: 22px;
+
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+}
+
+.dress-code {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    color: #ffffff;
+
+    margin-top: 4px;
+
+    letter-spacing: 2px;
+}
+
+.dress-note {
+    font-size: 11px;
+
+    color: #bcae97;
+
+    margin-top: 3px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    max-width: 600px;
+
+    margin: 35px auto;
+}
+
+.time {
+    padding: 20px 5px;
+
+    border: 1px solid rgba(214, 179, 106, 0.25);
+
+    background: #100b0d;
+}
+
+.num {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 38px;
+
+    color: var(--gold-soft);
+}
+
+.label {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #bba98c;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    max-width: 650px;
+
+    margin: 45px auto 0;
+}
+
+.story-item {
+    padding: 25px;
+
+    border-left: 1px solid var(--gold);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(75, 16, 29, 0.25),
+            transparent
+        );
+}
+
+.story-item h3 {
+    font-size: 25px;
+
+    margin: 0 0 7px;
+
+    color: var(--gold-soft);
+}
+
+.story-item p {
+    line-height: 1.7;
+
+    font-size: 13px;
+
+    color: #d9cdb9;
+
+    margin: 0;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    max-width: 680px;
+
+    margin: auto;
+
+    padding: 45px 30px;
+
+    border: 1px solid rgba(214, 179, 106, 0.35);
+
+    background: #0d090b;
+}
+
+.letter p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+}
+
+.signature {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+
+    color: var(--gold-soft);
+}
+
+/* =========================
+   OUR MOMENTS
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: minmax(0, 520px);
+
+    justify-content: center;
+
+    margin-top: 35px;
+}
+
+.photo-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(214, 179, 106, 0.3);
+
+    background:
+        linear-gradient(
+            135deg,
+            #201317,
+            #0e0c0d
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.photo-frame img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #806f5a;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 70px 20px 90px;
+
+    background: #050505;
+}
+
+.heart {
+    font-size: 25px;
+
+    color: #b74b62;
+
+    animation: pulse 1.6s infinite;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music {
+    position: fixed;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--gold);
+
+    background: #120a0d;
+
+    color: var(--gold-soft);
+
+    z-index: 30;
+
+    cursor: pointer;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+.fade {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+
+    transform: none;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover::after {
+        width: 330px;
+        height: 330px;
+    }
+
+    section {
+        padding: 75px 18px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cover h1 {
+        font-size: 72px;
+    }
+
+    .date {
+        font-size: 48px;
+    }
+
+    .dress-code {
+        font-size: 38px;
+    }
+
+    .message p {
+        font-size: 22px;
+    }
+}
 </style>
 </head>
+
+
 <body>
 
+<!-- ==================================================
+     OPENING
+================================================== -->
+
 <div class="cover" id="cover">
-  <div class="cover-card">
-    <div class="eyebrow">A Special Invitation</div>
-    <div class="goldline"></div>
-    <h1>Anisa</h1>
-    <div class="subtitle">31 August · Birthday Celebration</div>
-    <div class="goldline"></div>
-    <div class="eyebrow">with love, Gusvandi Harki</div>
-    <button class="open" onclick="openInvitation()">Open Invitation</button>
-  </div>
+
+    <div class="cover-card">
+
+        <div class="eyebrow">
+            A Special Invitation
+        </div>
+
+        <div class="goldline"></div>
+
+        <h1>
+            Anisa
+        </h1>
+
+        <div class="subtitle">
+            31 August · Birthday Celebration
+        </div>
+
+        <div class="goldline"></div>
+
+        <div class="eyebrow">
+            With Love, Gusvandi Harki
+        </div>
+
+        <button
+            class="open"
+            onclick="openInvitation()">
+
+            Open Invitation
+
+        </button>
+
+    </div>
+
 </div>
 
+
+<!-- ==================================================
+     MAIN CONTENT
+================================================== -->
+
 <main id="main" class="hidden">
+
+
+<!-- MESSAGE -->
+
 <section class="message">
-  <div class="container center fade">
-    <div class="kicker">For Someone Special</div>
-    <h2>Tonight is all about you.</h2>
-    <div class="ornament">— ✦ —</div>
-    <p>
-      To the girl who makes ordinary days feel extraordinary,
-      this little celebration is dedicated to you.
-      May every smile, every dream, and every beautiful moment
-      find its way to you this year.
-    </p>
-    <div class="serif" style="font-size:25px;color:var(--gold-soft)">Happy Birthday, Love.</div>
-  </div>
+
+    <div class="container center fade">
+
+        <div class="kicker">
+            For Someone Special
+        </div>
+
+        <h2>
+            Tonight is all about you.
+        </h2>
+
+        <div class="ornament">
+            — ✦ —
+        </div>
+
+        <p>
+
+            To the girl who makes ordinary days
+            feel extraordinary, this little celebration
+            is dedicated to you.
+
+            May every smile, every dream,
+            and every beautiful moment
+            find its way to you this year.
+
+        </p>
+
+        <div
+            class="serif"
+            style="
+            font-size:25px;
+            color:var(--gold-soft);
+            ">
+
+            Happy Birthday, Anisa.
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- EVENT -->
 
 <section class="event">
-  <div class="container fade">
-    <div class="center">
-      <div class="kicker">Save The Evening</div>
-      <h2>Birthday Dinner</h2>
-    </div>
-    <div class="event-box">
-      <div class="date">31 August</div>
-      <div class="goldline"></div>
-      <div class="venue">Barcelona The Glass House</div>
-      <p style="color:#bcae97;font-size:12px;line-height:1.8">An intimate evening, a beautiful place,<br>and a celebration made especially for you.</p>
 
-      <div style="margin:32px auto 5px;width:70px;height:1px;background:rgba(214,179,106,.35)"></div>
-      <div style="margin-top:22px;color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:10px">Dress Code</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:42px;color:#fff;margin-top:4px;letter-spacing:2px">WHITE</div>
-      <div style="font-size:11px;color:#bcae97;margin-top:3px">Elegant · Clean · Timeless</div>
+    <div class="container fade">
+
+        <div class="center">
+
+            <div class="kicker">
+                Save The Evening
+            </div>
+
+            <h2>
+                Birthday Dinner
+            </h2>
+
+        </div>
+
+
+        <div class="event-box">
+
+            <div class="date">
+                31 August
+            </div>
+
+            <div class="goldline"></div>
+
+            <div class="venue">
+                Barcelona The Glass House
+            </div>
+
+            <p
+                style="
+                color:#bcae97;
+                font-size:12px;
+                line-height:1.8;
+                ">
+
+                An intimate evening,
+                a beautiful place,
+                <br>
+
+                and a celebration made
+                especially for you.
+
+            </p>
+
+
+            <!-- DRESS CODE -->
+
+            <div class="dress-divider"></div>
+
+            <div class="dress-label">
+                Dress Code
+            </div>
+
+            <div class="dress-code">
+                WHITE
+            </div>
+
+            <div class="dress-note">
+                Elegant · Clean · Timeless
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
+
+
+<!-- COUNTDOWN -->
 
 <section>
-  <div class="container fade center">
-    <div class="kicker">Counting The Moments</div>
-    <h2>Until Your Day</h2>
-    <div class="countdown" id="countdown">
-      <div class="time"><div class="num" id="days">00</div><div class="label">Days</div></div>
-      <div class="time"><div class="num" id="hours">00</div><div class="label">Hours</div></div>
-      <div class="time"><div class="num" id="mins">00</div><div class="label">Minutes</div></div>
-      <div class="time"><div class="num" id="secs">00</div><div class="label">Seconds</div></div>
+
+    <div class="container fade center">
+
+        <div class="kicker">
+            Counting The Moments
+        </div>
+
+        <h2>
+            Until Your Day
+        </h2>
+
+
+        <div
+            class="countdown"
+            id="countdown">
+
+            <div class="time">
+
+                <div
+                    class="num"
+                    id="days">
+
+                    00
+
+                </div>
+
+                <div class="label">
+                    Days
+                </div>
+
+            </div>
+
+
+            <div class="time">
+
+                <div
+                    class="num"
+                    id="hours">
+
+                    00
+
+                </div>
+
+                <div class="label">
+                    Hours
+                </div>
+
+            </div>
+
+
+            <div class="time">
+
+                <div
+                    class="num"
+                    id="mins">
+
+                    00
+
+                </div>
+
+                <div class="label">
+                    Minutes
+                </div>
+
+            </div>
+
+
+            <div class="time">
+
+                <div
+                    class="num"
+                    id="secs">
+
+                    00
+
+                </div>
+
+                <div class="label">
+                    Seconds
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p
+            style="
+            font-size:11px;
+            color:#a99b86;
+            ">
+
+            Countdown otomatis menuju
+            31 August.
+
+        </p>
+
     </div>
-    <p style="font-size:11px;color:#a99b86">Countdown automatically targets the next 31 August.</p>
-  </div>
+
 </section>
 
+
+<!-- STORY -->
+
 <section class="message">
-  <div class="container fade">
-    <div class="center">
-  </div>
+
+    <div class="container fade">
+
+        <div class="center">
+
+            <div class="kicker">
+                Our Little Story
+            </div>
+
+            <h2>
+                Some Things Are Meant To Be.
+            </h2>
+
+        </div>
+
+
+        <div class="story">
+
+            <div class="story-item">
+
+                <h3>
+                    The Beginning
+                </h3>
+
+                <p>
+
+                    One meeting,
+                    one conversation,
+                    and somehow a new chapter began.
+
+                </p>
+
+            </div>
+
+
+            <div class="story-item">
+
+                <h3>
+                    The Memories
+                </h3>
+
+                <p>
+
+                    From the simplest moments
+                    to the ones we will always remember.
+
+                </p>
+
+            </div>
+
+
+            <div class="story-item">
+
+                <h3>
+                    What Comes Next
+                </h3>
+
+                <p>
+
+                    More laughter,
+                    more adventures,
+                    and many more birthdays
+                    to celebrate together.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- LOVE LETTER -->
 
 <section>
-  <div class="container fade">
-    <div class="center">
-      <div class="kicker">A Letter For You</div>
-      <h2>From My Heart</h2>
+
+    <div class="container fade">
+
+        <div class="center">
+
+            <div class="kicker">
+                A Letter For You
+            </div>
+
+            <h2>
+                From My Heart
+            </h2>
+
+        </div>
+
+
+        <div class="letter">
+
+            <p>
+
+                Anisa,
+
+                <br><br>
+
+                Happy birthday to the person
+                who has become such a beautiful
+                part of my life.
+
+                I hope you always remember
+                how special you are, not only today,
+                but on every ordinary day that follows.
+
+                <br><br>
+
+                Thank you for every laugh,
+                every little moment,
+                and every memory.
+
+                I may not always have
+                the perfect words,
+                but I hope you can always feel
+                how much you mean to me.
+
+                <br><br>
+
+                Here's to another year of you —
+                and, hopefully, many more moments
+                for us.
+
+            </p>
+
+
+            <div class="signature">
+
+                With all my love,
+
+                <br>
+
+                Gusvandi Harki ♥
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="letter">
-      <p>
-        Nisa,<br><br>
-        Happy birthday to the person who has become such a beautiful part of my life.
-        I hope you always remember how special you are, not only today,
-        but on every ordinary day that follows.
-        <br><br>
-        Thank you for every laugh, every little moment, and every memory.
-        I may not always have the perfect words, but I hope you can always feel
-        how much you mean to me.
-        <br><br>
-        Here's to another year of you — and, hopefully, many more moments for us.
-      </p>
-      <div class="signature">With all my love,<br>Gusvandi Harki ♥</div>
-    </div>
-  </div>
+
 </section>
 
+
+<!-- OUR MOMENTS -->
+
 <section class="message">
-  <div class="container fade center">
-    <div class="kicker">Memories</div>
-    <h2>Our Moments</h2>
-    <p class="lead">HAPPY BIRTHDAY.</p>
-    <div class="gallery" style="grid-template-columns:minmax(0,520px);justify-content:center">
-      <div class="photo" style="aspect-ratio:4/5">IMG_5682.jpeg</div>
+
+    <div class="container fade">
+
+        <div class="center">
+
+            <div class="kicker">
+                Memories
+            </div>
+
+            <h2>
+                Our Moment
+            </h2>
+
+            <p class="lead">
+
+                One picture.
+                One beautiful memory.
+                A thousand feelings.
+
+            </p>
+
+        </div>
+
+
+        <!--
+            GANTI FOTO DI:
+            assets/images/our-moment.jpg
+        -->
+
+        <div class="gallery">
+
+            <div class="photo-frame">
+
+                <img
+                    src="assets/images/our-moment.jpg"
+                    alt="Our Moment"
+                    onerror="showPhotoPlaceholder(this)"
+                >
+
+                <div
+                    class="photo-placeholder"
+                    id="photoPlaceholder">
+
+                    Our Moment
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
+
+
+<!-- FOOTER -->
 
 <footer>
-  <div class="heart">♥</div>
-  <div class="serif" style="font-size:34px;color:var(--gold-soft);margin:15px">Happy Birthday, Anisa</div>
-  <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#81715d">31 August · Barcelona The Glass House</div>
-  <div style="margin-top:25px;font-family:'Cormorant Garamond';font-size:20px;color:#bba98c">Gusvandi Harki</div>
+
+    <div class="heart">
+        ♥
+    </div>
+
+    <div
+        class="serif"
+        style="
+        font-size:34px;
+        color:var(--gold-soft);
+        margin:15px;
+        ">
+
+        Happy Birthday, Anisa
+
+    </div>
+
+
+    <div
+        style="
+        font-size:10px;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color:#81715d;
+        ">
+
+        31 August ·
+        Barcelona The Glass House
+
+    </div>
+
+
+    <div
+        style="
+        margin-top:25px;
+        font-family:'Cormorant Garamond';
+        font-size:20px;
+        color:#bba98c;
+        ">
+
+        Gusvandi Harki
+
+    </div>
+
 </footer>
+
 </main>
 
-<button class="music hidden" id="musicBtn" onclick="toggleMusic()" aria-label="Music">♫</button>
-<audio id="audio" loop preload="none"></audio>
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music hidden"
+    id="musicBtn"
+    onclick="toggleMusic()"
+    aria-label="Music">
+
+    ♫
+
+</button>
+
+
+<!--
+======================================================
+MUSIC
+
+Simpan lagu di:
+
+assets/music/birthday.mp3
+
+======================================================
+-->
+
+<audio
+    id="audio"
+    loop
+    preload="none"
+    src="assets/music/birthday.mp3">
+</audio>
+
 
 <script>
-function openInvitation(){
-  document.getElementById('cover').style.display='none';
-  document.getElementById('main').classList.remove('hidden');
-  document.getElementById('musicBtn').classList.remove('hidden');
-  document.querySelectorAll('.fade').forEach((el,i)=>setTimeout(()=>el.classList.add('show'),i*120));
-  window.scrollTo(0,0);
+
+/* ==================================================
+   OPEN INVITATION
+================================================== */
+
+function openInvitation() {
+
+    document
+        .getElementById('cover')
+        .style.display = 'none';
+
+    document
+        .getElementById('main')
+        .classList
+        .remove('hidden');
+
+    document
+        .getElementById('musicBtn')
+        .classList
+        .remove('hidden');
+
+    document
+        .querySelectorAll('.fade')
+        .forEach((element, index) => {
+
+            setTimeout(
+                () => {
+
+                    element
+                        .classList
+                        .add('show');
+
+                },
+                index * 120
+            );
+
+        });
+
+    window.scrollTo(0, 0);
 }
 
-function nextBirthday(){
-  const now=new Date(), year=now.getFullYear();
-  let d=new Date(year,7,31,19,0,0);
-  if(d<=now)d=new Date(year+1,7,31,19,0,0);
-  return d;
-}
-function updateCountdown(){
-  const diff=nextBirthday()-new Date();
-  const s=Math.max(0,Math.floor(diff/1000));
-  document.getElementById('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');
-  document.getElementById('hours').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
-  document.getElementById('mins').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');
-  document.getElementById('secs').textContent=String(s%60).padStart(2,'0');
-}
-updateCountdown();setInterval(updateCountdown,1000);
 
-function toggleMusic(){
-  const a=document.getElementById('audio'), b=document.getElementById('musicBtn');
-  if(!a.src){alert('Musik belum ditambahkan. Nanti cukup masukkan file MP3 pada folder website dan ubah bagian audio di HTML.');return}
-  if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='♫'}
+/* ==================================================
+   COUNTDOWN
+================================================== */
+
+function nextBirthday() {
+
+    const now = new Date();
+
+    const currentYear =
+        now.getFullYear();
+
+    /*
+       31 August pukul 19:00
+    */
+
+    let birthday =
+        new Date(
+            currentYear,
+            7,
+            31,
+            19,
+            0,
+            0
+        );
+
+    /*
+       Jika sudah lewat,
+       target tahun berikutnya.
+    */
+
+    if (birthday <= now) {
+
+        birthday =
+            new Date(
+                currentYear + 1,
+                7,
+                31,
+                19,
+                0,
+                0
+            );
+
+    }
+
+    return birthday;
 }
+
+
+function updateCountdown() {
+
+    const difference =
+        nextBirthday() - new Date();
+
+    const seconds =
+        Math.max(
+            0,
+            Math.floor(
+                difference / 1000
+            )
+        );
+
+
+    const days =
+        Math.floor(
+            seconds / 86400
+        );
+
+
+    const hours =
+        Math.floor(
+            (seconds % 86400) / 3600
+        );
+
+
+    const minutes =
+        Math.floor(
+            (seconds % 3600) / 60
+        );
+
+
+    const secs =
+        seconds % 60;
+
+
+    document
+        .getElementById('days')
+        .textContent =
+        String(days)
+        .padStart(2, '0');
+
+
+    document
+        .getElementById('hours')
+        .textContent =
+        String(hours)
+        .padStart(2, '0');
+
+
+    document
+        .getElementById('mins')
+        .textContent =
+        String(minutes)
+        .padStart(2, '0');
+
+
+    document
+        .getElementById('secs')
+        .textContent =
+        String(secs)
+        .padStart(2, '0');
+
+}
+
+
+updateCountdown();
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+/* ==================================================
+   MUSIC
+================================================== */
+
+function toggleMusic() {
+
+    const audio =
+        document.getElementById('audio');
+
+    const button =
+        document.getElementById('musicBtn');
+
+
+    if (
+        !audio.getAttribute('src')
+    ) {
+
+        alert(
+            'Tambahkan file MP3 di assets/music/birthday.mp3'
+        );
+
+        return;
+
+    }
+
+
+    if (audio.paused) {
+
+        audio
+            .play()
+            .then(() => {
+
+                button.textContent = '❚❚';
+
+            })
+            .catch(() => {
+
+                alert(
+                    'Browser memblokir pemutaran musik. Tekan tombol musik sekali lagi.'
+                );
+
+            });
+
+    }
+
+    else {
+
+        audio.pause();
+
+        button.textContent = '♫';
+
+    }
+
+}
+
+
+/* ==================================================
+   PHOTO FALLBACK
+================================================== */
+
+function showPhotoPlaceholder(image) {
+
+    image.style.display = 'none';
+
+}
+
+
+/* ==================================================
+   FADE-IN ON SCROLL
+================================================== */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                            .classList
+                            .add('show');
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+document
+    .querySelectorAll('.fade')
+    .forEach(
+        element => {
+
+            observer.observe(element);
+
+        }
+    );
+
 </script>
+
 </body>
 </html>
