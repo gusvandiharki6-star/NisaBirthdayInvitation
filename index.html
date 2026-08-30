@@ -1,66 +1,39 @@
 from pathlib import Path
 
-src = Path("/mnt/data/index.html")
-html = src.read_text(encoding="utf-8")
+src = Path("/mnt/data/Pasted text.txt")
+text = src.read_text(encoding="utf-8")
 
 replacements = {
-    "A Special Invitation": "A Special Invitation",
-    "31 August · Birthday Celebration": "31 August · Birthday Celebration",
-    "with love, Gusvandi Harki": "with love, Gusvandi Harki",
-    "Open Invitation": "Open Invitation",
-    "For Someone Special": "For Someone Special",
-    "Tonight is all about you.": "Tonight Is All About You.",
-    "To the girl who makes ordinary days feel extraordinary,": "To the girl who makes ordinary days feel extraordinary,",
-    "this little celebration is dedicated to you.": "this little celebration is dedicated to you.",
-    "May every smile, every dream, and every beautiful moment": "May every smile, every dream, and every beautiful moment",
-    "find its way to you this year.": "find its way to you this year.",
-    "Happy Birthday, Anisa.": "Happy Birthday, Anisa.",
-    "Save The Evening": "Save The Evening",
-    "Birthday Dinner": "Birthday Dinner",
-    "An intimate evening, a beautiful place,<br>and a celebration made especially for you.": "An intimate evening, a beautiful place,<br>and a celebration made especially for you.",
-    "Dress Code": "Dress Code",
-    "Elegant · Clean · Timeless": "Elegant · Clean · Timeless",
-    "Counting The Moments": "Counting The Moments",
-    "Until Your Day": "Until Your Day",
-    "Countdown automatically targets the next 31 August.": "Countdown automatically targets the next 31 August.",
-    "Our Little Story": "Our Little Story",
-    "Some Things Are Meant To Be.": "Some Things Are Meant To Be.",
-    "The Beginning": "The Beginning",
-    "One meeting, one conversation, and somehow a new chapter began.": "One meeting, one conversation, and somehow a new chapter began.",
-    "The Memories": "The Memories",
-    "From the simplest moments to the ones we will always remember.": "From the simplest moments to the ones we will always remember.",
-    "What Comes Next": "What Comes Next",
-    "More laughter, more adventures, and many more birthdays to celebrate together.": "More laughter, more adventures, and many more birthdays to celebrate together.",
-    "A Letter For You": "A Letter For You",
-    "From My Heart": "From My Heart",
-    "Anisa,<br><br>": "Anisa,<br><br>",
-    "Happy birthday to the person who has become such a beautiful part of my life.": "Happy birthday to the person who has become such a beautiful part of my life.",
-    "I hope you always remember how special you are, not only today,": "I hope you always remember how special you are, not only today,",
-    "but on every ordinary day that follows.": "but on every ordinary day that follows.",
-    "Thank you for every laugh, every little moment, and every memory.": "Thank you for every laugh, every little moment, and every memory.",
-    "I may not always have the perfect words, but I hope you can always feel": "I may not always have the perfect words, but I hope you can always feel",
-    "how much you mean to me.": "how much you mean to me.",
-    "Here's to another year of you — and, hopefully, many more moments for us.": "Here's to another year of you — and, hopefully, many more moments for us.",
-    "With all my love,": "With all my love,",
-    "Memories": "Memories",
-    "Our Moments": "Our Moments",
-    "Foto-foto kalian bisa ditambahkan di bagian ini nanti.": "Your favorite memories can be added here.",
-    "Your Photo": "Your Photo",
-    "Days": "Days",
-    "Hours": "Hours",
-    "Minutes": "Minutes",
-    "Seconds": "Seconds",
+    '<html lang="id">': '<html lang="en">',
+    'Undangan ulang tahun spesial untuk Anisa dari Gusvandi Harki.': 'A special birthday invitation for Anisa from Gusvandi Harki.',
+    '>Buka Undangan<': '>Open Invitation<',
+    'alt="Foto spesial Anisa"': 'alt="A special photo of Anisa"',
+    '>Letakkan IMG_5682.jpeg<br>di folder yang sama dengan file HTML<': '>Place IMG_5682.jpeg<br>in the same folder as the HTML file<',
+    '<h2>Hari Ini Tentang Kamu</h2>': '<h2>Today Is All About You</h2>',
+    'Untuk seseorang yang membuat hari-hari biasa terasa lebih istimewa.\n  Hari ini bukan hanya tentang bertambahnya usia, tetapi tentang merayakan\n  seseorang yang begitu berarti dalam hidupku.':
+    'For someone who makes ordinary days feel a little more special.\n  Today is not only about celebrating another year of your life, but also about celebrating\n  someone who means so much to me.',
+    '>Tanggal<': '>Date<',
+    'Minggu<br>18.00 WIB — Selesai': 'Sunday<br>6:00 PM WIB — Until the End',
+    '>Tempat<': '>Venue<',
+    'Lokasi dapat kamu ubah di HTML ini.<br>Dress Code: White & Gold':
+    'The location can be customized in this HTML file.<br>Dress Code: White & Gold',
+    '<h2>Menuju Hari Spesial</h2>': '<h2>Counting Down to Your Special Day</h2>',
+    '>Hari</div>': '>Days</div>',
+    '>Jam</div>': '>Hours</div>',
+    '>Menit</div>': '>Minutes</div>',
+    '>Detik</div>': '>Seconds</div>',
+    'Foto utama menggunakan <b>IMG_5682.jpeg</b>. Kamu bisa menggandakan foto tersebut untuk membuat gallery tambahan.':
+    'The main photo uses <b>IMG_5682.jpeg</b>. You can duplicate or replace it to create an additional photo gallery.',
+    'Selamat ulang tahun untuk perempuan yang selalu berhasil membuat hidupku\n    terasa lebih berwarna. Terima kasih sudah hadir, untuk setiap tawa,\n    cerita, perhatian, dan momen kecil yang menjadi kenangan besar.\n    <br><br>\n    Semoga semua hal baik yang kamu doakan perlahan menjadi nyata.\n    Semoga kamu selalu dikelilingi kebahagiaan, dan semoga aku masih boleh\n    menjadi salah satu alasan di balik senyum kamu.\n    <br><br>\n    Aku sayang kamu, hari ini, besok, dan di hari-hari setelahnya.':
+    'Happy birthday to the woman who has always made my life feel a little more colorful. Thank you for being here—for every laugh,\n    every story, every little act of care, and every small moment that became a beautiful memory.\n    <br><br>\n    I hope all the wonderful things you wish for slowly become real.\n    I hope you are always surrounded by happiness, and I hope I can continue\n    to be one of the reasons behind your smile.\n    <br><br>\n    I love you today, tomorrow, and in all the days that follow.',
+    "Tambahkan file MP3 lalu ubah src audio di HTML.": "Add an MP3 file and update the audio src in the HTML."
 }
+
 for old, new in replacements.items():
-    html = html.replace(old, new)
+    text = text.replace(old, new)
 
-# Use the requested photo in the existing gallery placeholder.
-html = html.replace(
-    '<div class="photo" style="aspect-ratio:4/5">Your Photo</div>',
-    '<div class="photo" style="aspect-ratio:4/5;overflow:hidden"><img src="IMG_5682.jpeg" alt="Anisa" style="width:100%;height:100%;object-fit:cover;display:block"></div>'
-)
+# Keep the same Python structure while changing the generated HTML text to English.
+out = Path("/mnt/data/Birthday_Invitation_White_Gold_English.txt")
+out.write_text(text, encoding="utf-8")
 
-out = Path("/mnt/data/Birthday_Invitation_White_Gold_English.html")
-out.write_text(html, encoding="utf-8")
-
-print(f"Done: {out}")
+print(f"Created translated file: {out}")
