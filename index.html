@@ -113,9 +113,7 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
     </div>
   </div>
 </div>
-<audio id="audio" loop preload="auto">
-  <source src="birthday-song.mp3" type="audio/mpeg">
-</audio>
+
 <main id="main" class="hidden">
 <section class="message">
 <div class="container fade message-box">
@@ -233,7 +231,7 @@ updateCountdown();setInterval(updateCountdown,1000);
 
 function toggleMusic(){
   const a=document.getElementById('audio'),b=document.getElementById('musicBtn');
-  if(!a.src){alert('Tambahkan file MP3 lalu ubah src audio di HTML.');return}
+  if(!a.src){alert('<source src="birthday-song.mp3" type="audio/mpeg">');return}
   if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='♫'}
 }
 </script>
