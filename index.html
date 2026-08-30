@@ -113,7 +113,9 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
     </div>
   </div>
 </div>
-
+<audio id="audio" loop preload="auto">
+  <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
 <main id="main" class="hidden">
 <section class="message">
 <div class="container fade message-box">
@@ -183,7 +185,7 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
     <h2>From My Heart</h2>
   </div>
   <div class="note">
-    <p>Anisa,<br><br>
+    <p>Nisa,<br><br>
     Happy birthday to the person who has become such a beautiful part of my life. 
       I hope you always remember how special you are, not only today, but on every ordinary day that follows.
     <br><br>
@@ -238,7 +240,4 @@ function toggleMusic(){
 </body>
 </html>'''
 
-out = Path("/mnt/data/Undangan_Birthday_White_Gold.html")
-out.write_text(html, encoding="utf-8")
 
-print(f"Berhasil dibuat: {out}")
