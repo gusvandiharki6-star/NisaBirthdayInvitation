@@ -1,246 +1,66 @@
 from pathlib import Path
 
-html = r'''<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday, Anisa 🤍</title>
-<meta name="description" content="Undangan ulang tahun spesial untuk Anisa dari Gusvandi Harki.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
-<style>
-:root{
-  --white:#fffdf9; --ivory:#f7f1e7; --gold:#c99a3b; --gold2:#e3c47a;
-  --ink:#3d3730; --muted:#857a6d; --line:#e6d7b9;
+src = Path("/mnt/data/index.html")
+html = src.read_text(encoding="utf-8")
+
+replacements = {
+    "A Special Invitation": "A Special Invitation",
+    "31 August · Birthday Celebration": "31 August · Birthday Celebration",
+    "with love, Gusvandi Harki": "with love, Gusvandi Harki",
+    "Open Invitation": "Open Invitation",
+    "For Someone Special": "For Someone Special",
+    "Tonight is all about you.": "Tonight Is All About You.",
+    "To the girl who makes ordinary days feel extraordinary,": "To the girl who makes ordinary days feel extraordinary,",
+    "this little celebration is dedicated to you.": "this little celebration is dedicated to you.",
+    "May every smile, every dream, and every beautiful moment": "May every smile, every dream, and every beautiful moment",
+    "find its way to you this year.": "find its way to you this year.",
+    "Happy Birthday, Anisa.": "Happy Birthday, Anisa.",
+    "Save The Evening": "Save The Evening",
+    "Birthday Dinner": "Birthday Dinner",
+    "An intimate evening, a beautiful place,<br>and a celebration made especially for you.": "An intimate evening, a beautiful place,<br>and a celebration made especially for you.",
+    "Dress Code": "Dress Code",
+    "Elegant · Clean · Timeless": "Elegant · Clean · Timeless",
+    "Counting The Moments": "Counting The Moments",
+    "Until Your Day": "Until Your Day",
+    "Countdown automatically targets the next 31 August.": "Countdown automatically targets the next 31 August.",
+    "Our Little Story": "Our Little Story",
+    "Some Things Are Meant To Be.": "Some Things Are Meant To Be.",
+    "The Beginning": "The Beginning",
+    "One meeting, one conversation, and somehow a new chapter began.": "One meeting, one conversation, and somehow a new chapter began.",
+    "The Memories": "The Memories",
+    "From the simplest moments to the ones we will always remember.": "From the simplest moments to the ones we will always remember.",
+    "What Comes Next": "What Comes Next",
+    "More laughter, more adventures, and many more birthdays to celebrate together.": "More laughter, more adventures, and many more birthdays to celebrate together.",
+    "A Letter For You": "A Letter For You",
+    "From My Heart": "From My Heart",
+    "Anisa,<br><br>": "Anisa,<br><br>",
+    "Happy birthday to the person who has become such a beautiful part of my life.": "Happy birthday to the person who has become such a beautiful part of my life.",
+    "I hope you always remember how special you are, not only today,": "I hope you always remember how special you are, not only today,",
+    "but on every ordinary day that follows.": "but on every ordinary day that follows.",
+    "Thank you for every laugh, every little moment, and every memory.": "Thank you for every laugh, every little moment, and every memory.",
+    "I may not always have the perfect words, but I hope you can always feel": "I may not always have the perfect words, but I hope you can always feel",
+    "how much you mean to me.": "how much you mean to me.",
+    "Here's to another year of you — and, hopefully, many more moments for us.": "Here's to another year of you — and, hopefully, many more moments for us.",
+    "With all my love,": "With all my love,",
+    "Memories": "Memories",
+    "Our Moments": "Our Moments",
+    "Foto-foto kalian bisa ditambahkan di bagian ini nanti.": "Your favorite memories can be added here.",
+    "Your Photo": "Your Photo",
+    "Days": "Days",
+    "Hours": "Hours",
+    "Minutes": "Minutes",
+    "Seconds": "Seconds",
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--white);color:var(--ink);font-family:Montserrat,sans-serif;font-weight:300}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;z-index:20;
-background-image:radial-gradient(rgba(201,154,59,.18) .6px,transparent .6px);background-size:7px 7px}
-h1,h2,h3,.serif{font-family:"Cormorant Garamond",serif}
-.script{font-family:Parisienne,cursive}
-button{font:inherit}
-.cover{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;
-background:radial-gradient(circle at 20% 30%,#fff 0,#fff 25%,transparent 45%),
-linear-gradient(120deg,#fffefa,#f5eee3)}
-.cover:before,.cover:after{content:"";position:absolute;border:1px solid rgba(201,154,59,.3);border-radius:50%}
-.cover:before{width:560px;height:560px;left:-280px;top:-130px}
-.cover:after{width:650px;height:650px;right:-330px;bottom:-180px}
-.gold-dust{position:absolute;inset:0;background:
-radial-gradient(circle at 12% 20%,var(--gold2) 0 2px,transparent 3px),
-radial-gradient(circle at 83% 17%,var(--gold2) 0 2px,transparent 3px),
-radial-gradient(circle at 70% 80%,var(--gold2) 0 1.5px,transparent 3px),
-radial-gradient(circle at 25% 84%,var(--gold2) 0 1.5px,transparent 3px)}
-.cover-grid{width:min(1180px,94%);min-height:85vh;display:grid;grid-template-columns:1fr 1fr;
-align-items:center;gap:45px;position:relative;z-index:2}
-.cover-copy{text-align:center;padding:35px}
-.mini{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
-.cover h1{font-size:clamp(70px,9vw,125px);line-height:.72;margin:18px 0 12px;font-weight:500;color:#b8872e}
-.cover h1 span{display:block;font-size:.78em}
-.name{font-size:clamp(30px,4vw,48px);letter-spacing:3px;color:#54493d}
-.date{margin:18px 0;font-size:12px;letter-spacing:4px;color:var(--muted)}
-.line{height:1px;width:95px;background:var(--gold);margin:18px auto}
-.open{margin-top:30px;border:1px solid var(--gold);background:white;color:#9b7228;padding:15px 30px;
-letter-spacing:3px;font-size:10px;text-transform:uppercase;cursor:pointer;transition:.3s}
-.open:hover{background:var(--gold);color:white}
-.hero-photo{height:min(72vh,700px);min-height:470px;border-radius:300px 300px 8px 8px;overflow:hidden;
-border:1px solid var(--gold2);padding:8px;background:#fff;box-shadow:0 18px 60px rgba(111,81,30,.13)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:290px 290px 3px 3px}
-section{padding:100px 22px;position:relative}
-.container{max-width:1050px;margin:auto}
-.center{text-align:center}
-.kicker{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
-h2{font-size:clamp(42px,6vw,68px);font-weight:500;margin:10px 0 24px;color:#4a4035}
-.lead{max-width:700px;margin:auto;line-height:1.9;font-size:14px;color:var(--muted)}
-.flower{color:var(--gold);font-size:22px;letter-spacing:8px}
-.message{background:linear-gradient(180deg,#fff,#faf5eb);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.message-box{max-width:760px;margin:auto;text-align:center}
-.message-box p{font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1.55;color:#5a4d3f}
-.event{background:#fff}
-.event-card{border:1px solid var(--line);background:linear-gradient(135deg,#fff,#fbf5e9);
-padding:45px 30px;display:grid;grid-template-columns:1fr 1fr;position:relative}
-.event-card:before,.event-card:after{content:"✦";position:absolute;color:var(--gold);font-size:22px}
-.event-card:before{left:18px;top:14px}.event-card:after{right:18px;bottom:14px}
-.event-col{text-align:center;padding:15px 30px}
-.event-col+ .event-col{border-left:1px solid var(--line)}
-.bigdate{font-family:"Cormorant Garamond";font-size:65px;color:#b8862c}
-.event-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:8px}
-.info{font-size:13px;line-height:1.9;color:var(--muted);margin-top:18px}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:35px auto}
-.time{border:1px solid var(--line);padding:18px 8px;background:#fff}
-.num{font-family:"Cormorant Garamond";font-size:40px;color:#b8862c}.label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:35px}
-.gallery .photo{aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:#f5eee3}
-.gallery img{width:100%;height:100%;object-fit:cover;display:block}
-.note{max-width:760px;margin:auto;padding:50px 38px;border:1px solid var(--line);background:#fff}
-.note p{font-family:"Cormorant Garamond";font-size:23px;line-height:1.7;color:#5a4d3f}
-.signature{font-family:Parisienne,cursive;font-size:34px;color:#b8862c}
-.music{position:fixed;right:18px;bottom:18px;width:50px;height:50px;border-radius:50%;border:1px solid var(--gold);
-background:#fff;color:#b8862c;z-index:30;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,.08)}
-.hidden{display:none!important}
-.fade{opacity:0;transform:translateY(25px);transition:1s}.fade.show{opacity:1;transform:none}
-footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px solid var(--line)}
-@media(max-width:760px){
-  .cover-grid{grid-template-columns:1fr;gap:10px;padding:35px 0}
-  .cover-copy{padding:15px}.hero-photo{height:55vh;min-height:390px;max-width:430px;margin:auto}
-  section{padding:75px 18px}.event-card{grid-template-columns:1fr;padding:30px 15px}
-  .event-col+ .event-col{border-left:0;border-top:1px solid var(--line);margin-top:15px;padding-top:30px}
-  .countdown{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}
-  .gallery .photo:last-child{grid-column:1/-1}.note{padding:35px 22px}
-}
-</style>
-</head>
-<body>
+for old, new in replacements.items():
+    html = html.replace(old, new)
 
-<div class="cover" id="cover">
-  <div class="gold-dust"></div>
-  <div class="cover-grid">
-    <div class="cover-copy">
-      <div class="mini">For Someone Special ♡</div>
-      <div class="line"></div>
-      <h1><span>Happy</span><span class="script">Birthday</span></h1>
-      <div class="name">ANISA</div>
-      <div class="date">31 AUGUST · A SPECIAL DAY</div>
-      <div class="line"></div>
-      <div style="font-size:11px;color:#857a6d">With love, Gusvandi Harki</div>
-      <button class="open" onclick="openInvitation()">Buka Undangan</button>
-    </div>
-    <div class="hero-photo">
-      <img src="IMG_5682.jpeg" alt="Foto spesial Anisa" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;color:#b8862c;font-family:Cormorant Garamond;font-size:25px;text-align:center;padding:30px&quot;>Letakkan IMG_5682.jpeg<br>di folder yang sama dengan file HTML</div>'">
-    </div>
-  </div>
-</div>
+# Use the requested photo in the existing gallery placeholder.
+html = html.replace(
+    '<div class="photo" style="aspect-ratio:4/5">Your Photo</div>',
+    '<div class="photo" style="aspect-ratio:4/5;overflow:hidden"><img src="IMG_5682.jpeg" alt="Anisa" style="width:100%;height:100%;object-fit:cover;display:block"></div>'
+)
 
-<main id="main" class="hidden">
-<section class="message">
-<div class="container fade message-box">
-  <div class="kicker">You Are Invited</div>
-  <h2>Hari Ini Tentang Kamu</h2>
-  <div class="flower">— ✦ ♡ ✦ —</div>
-  <p>Untuk seseorang yang membuat hari-hari biasa terasa lebih istimewa.
-  Hari ini bukan hanya tentang bertambahnya usia, tetapi tentang merayakan
-  seseorang yang begitu berarti dalam hidupku.</p>
-  <div class="serif" style="font-size:27px;color:#b8862c">Happy Birthday, Anisa ♡</div>
-</div>
-</section>
-
-<section class="event">
-<div class="container fade">
-  <div class="center">
-    <div class="kicker">Save The Date</div>
-    <h2>Birthday Celebration</h2>
-  </div>
-  <div class="event-card">
-    <div class="event-col">
-      <div class="event-label">Tanggal</div>
-      <div class="bigdate">31</div>
-      <div style="letter-spacing:3px;font-size:12px">AUGUST 2026</div>
-      <div class="info">Minggu<br>18.00 WIB — Selesai</div>
-    </div>
-    <div class="event-col">
-      <div class="event-label">Tempat</div>
-      <div class="bigdate" style="font-size:42px">Dinner</div>
-      <div style="letter-spacing:2px;font-size:12px">SPECIAL EVENING</div>
-      <div class="info">Lokasi dapat kamu ubah di HTML ini.<br>Dress Code: White & Gold</div>
-    </div>
-  </div>
-</div>
-</section>
-
-<section>
-<div class="container fade center">
-  <div class="kicker">Counting The Moments</div>
-  <h2>Menuju Hari Spesial</h2>
-  <div class="countdown">
-    <div class="time"><div class="num" id="days">00</div><div class="label">Hari</div></div>
-    <div class="time"><div class="num" id="hours">00</div><div class="label">Jam</div></div>
-    <div class="time"><div class="num" id="mins">00</div><div class="label">Menit</div></div>
-    <div class="time"><div class="num" id="secs">00</div><div class="label">Detik</div></div>
-  </div>
-</div>
-</section>
-
-<section class="message">
-<div class="container fade center">
-  <div class="kicker">Our Memories</div>
-  <h2>Moments With You</h2>
-  <p class="lead">Foto utama menggunakan <b>IMG_5682.jpeg</b>. Kamu bisa menggandakan foto tersebut untuk membuat gallery tambahan.</p>
-  <div class="gallery">
-    <div class="photo"><img src="IMG_5682.jpeg" alt="Our moment"></div>
-    <div class="photo"><img src="IMG_5682.jpeg" alt="Our moment"></div>
-    <div class="photo"><img src="IMG_5682.jpeg" alt="Our moment"></div>
-  </div>
-</div>
-</section>
-
-<section>
-<div class="container fade">
-  <div class="center">
-    <div class="kicker">A Little Note For You</div>
-    <h2>From My Heart</h2>
-  </div>
-  <div class="note">
-    <p>Anisa,<br><br>
-    Selamat ulang tahun untuk perempuan yang selalu berhasil membuat hidupku
-    terasa lebih berwarna. Terima kasih sudah hadir, untuk setiap tawa,
-    cerita, perhatian, dan momen kecil yang menjadi kenangan besar.
-    <br><br>
-    Semoga semua hal baik yang kamu doakan perlahan menjadi nyata.
-    Semoga kamu selalu dikelilingi kebahagiaan, dan semoga aku masih boleh
-    menjadi salah satu alasan di balik senyum kamu.
-    <br><br>
-    Aku sayang kamu, hari ini, besok, dan di hari-hari setelahnya.</p>
-    <div class="signature">With all my love,<br>Gusvandi Harki ♡</div>
-  </div>
-</div>
-</section>
-
-<footer>
-  <div style="font-size:25px;color:#b8862c">♡</div>
-  <div class="serif" style="font-size:38px;color:#b8862c;margin:12px">Happy Birthday, Anisa</div>
-  <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#857a6d">31 August 2026 · With Love</div>
-</footer>
-</main>
-
-<button class="music hidden" id="musicBtn" onclick="toggleMusic()">♫</button>
-<audio id="audio" loop preload="none"></audio>
-
-<script>
-function openInvitation(){
-  document.getElementById('cover').style.display='none';
-  document.getElementById('main').classList.remove('hidden');
-  document.getElementById('musicBtn').classList.remove('hidden');
-  document.querySelectorAll('.fade').forEach((el,i)=>setTimeout(()=>el.classList.add('show'),i*120));
-  window.scrollTo(0,0);
-}
-function nextBirthday(){
-  const now=new Date();
-  let d=new Date(now.getFullYear(),7,31,18,0,0);
-  if(d<=now)d=new Date(now.getFullYear()+1,7,31,18,0,0);
-  return d;
-}
-function updateCountdown(){
-  const diff=Math.max(0,nextBirthday()-new Date()), s=Math.floor(diff/1000);
-  document.getElementById('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');
-  document.getElementById('hours').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
-  document.getElementById('mins').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');
-  document.getElementById('secs').textContent=String(s%60).padStart(2,'0');
-}
-updateCountdown();setInterval(updateCountdown,1000);
-
-function toggleMusic(){
-  const a=document.getElementById('audio'),b=document.getElementById('musicBtn');
-  if(!a.src){alert('Tambahkan file MP3 lalu ubah src audio di HTML.');return}
-  if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='♫'}
-}
-</script>
-</body>
-</html>'''
-
-out = Path("/mnt/data/Undangan_Birthday_White_Gold.html")
+out = Path("/mnt/data/Birthday_Invitation_White_Gold_English.html")
 out.write_text(html, encoding="utf-8")
 
-print(f"Berhasil dibuat: {out}")
+print(f"Done: {out}")
