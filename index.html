@@ -1,6 +1,4 @@
-from pathlib import Path
-
-html = r'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -138,7 +136,7 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
       <div class="event-label">Tanggal</div>
       <div class="bigdate">31</div>
       <div style="letter-spacing:3px;font-size:12px">AUGUST 2026</div>
-      <div class="info">Minggu<br>18.30 WIB — Selesai</div>
+      <div class="info">Senin<br>18.30 WIB — Selesai</div>
     </div>
     <div class="event-col">
       <div class="event-label">Tempat</div>
@@ -167,7 +165,7 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
 <div class="container fade center">
   <div class="kicker">Our Memories</div>
   <h2>Moments With You</h2>
-  <p class="lead">HAPPY BIARTHDAY!.</p>
+  <p class="lead">HAPPY BIRTHDAY!.</p>
   <div class="gallery">
     <div class="photo"><img src="IMG_5682.jpeg" alt="Our moment"></div>
     <div class="photo"><img src="IMG_5682.jpeg" alt="Our moment"></div>
@@ -203,23 +201,37 @@ footer{text-align:center;padding:80px 20px;background:#fbf5e9;border-top:1px sol
 </footer>
 </main>
 
-<button class="music hidden" id="musicBtn" onclick="toggleMusic()">♫</button>
-<audio id="audio" loop preload="birthday-song.mp3"></audio>
+<button class="music hidden" id="musicBtn" onclick="toggleMusic()">❚❚</button>
+<audio id="audio" src="birthday-song.mp3" loop preload="auto"></audio>
 
 <script>
 function openInvitation(){
   document.getElementById('cover').style.display='none';
   document.getElementById('main').classList.remove('hidden');
-  document.getElementById('musicBtn').classList.remove('hidden');
+  
+  const musicBtn = document.getElementById('musicBtn');
+  musicBtn.classList.remove('hidden');
+  
+  // Memutar audio otomatis saat tombol Open Invitation diklik
+  const audio = document.getElementById('audio');
+  audio.play().then(() => {
+    musicBtn.textContent = '❚❚';
+  }).catch(err => {
+    console.log("Autoplay dicegah browser: ", err);
+    musicBtn.textContent = '♫';
+  });
+
   document.querySelectorAll('.fade').forEach((el,i)=>setTimeout(()=>el.classList.add('show'),i*120));
   window.scrollTo(0,0);
 }
+
 function nextBirthday(){
   const now=new Date();
-  let d=new Date(now.getFullYear(),7,31,18,0,0);
-  if(d<=now)d=new Date(now.getFullYear()+1,7,31,18,0,0);
+  let d=new Date(now.getFullYear(),7,31,18,30,0);
+  if(d<=now)d=new Date(now.getFullYear()+1,7,31,18,30,0);
   return d;
 }
+
 function updateCountdown(){
   const diff=Math.max(0,nextBirthday()-new Date()), s=Math.floor(diff/1000);
   document.getElementById('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');
@@ -231,11 +243,14 @@ updateCountdown();setInterval(updateCountdown,1000);
 
 function toggleMusic(){
   const a=document.getElementById('audio'),b=document.getElementById('musicBtn');
-  if(!a.src){alert("birthday-song.mp3");return}
-  if(a.paused){a.play();b.textContent='❚❚'}else{a.pause();b.textContent='♫'}
+  if(a.paused){
+    a.play();
+    b.textContent='❚❚';
+  } else {
+    a.pause();
+    b.textContent='♫';
+  }
 }
 </script>
 </body>
-</html>'''
-
-
+</html>
